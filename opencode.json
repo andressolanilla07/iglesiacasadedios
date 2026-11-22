@@ -1,0 +1,31 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "docs/CDD-007-arquitectura-seguridad.md",
+    "docs/CDD-008-inicio-opencode.md"
+  ],
+  "permission": {
+    "external_directory": "ask",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "bash": {
+      "*": "ask",
+      "git status": "allow",
+      "git status *": "allow",
+      "git diff": "allow",
+      "git diff *": "allow",
+      "git log": "allow",
+      "git log *": "allow",
+      "node --version": "allow",
+      "npm --version": "allow",
+      "npm run build": "allow",
+      "npm run check": "allow",
+      "npm run typecheck": "allow",
+      "npm run test": "allow"
+    }
+  }
+}

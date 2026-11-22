@@ -1,0 +1,11 @@
+import { readFile, access } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const html=await readFile('dist/index.html','utf8');
+const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+assert.equal(ids.length,new Set(ids).size,'IDs duplicados');
+for(const [,anchor] of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.includes(anchor),`Ancla ausente: ${anchor}`);
+for(const [,file] of html.matchAll(/(?:src|href)="\.\/([^"]+)"/g)) await access(`dist/${file}`);
+assert.ok(html.includes('noindex, nofollow'),'El prototipo debe evitar indexación');
+assert.ok(!/<form\b/.test(html),'No debe recopilar datos en esta fase');
+assert.ok(!/(?:https?:\/\/|wa\.me|mailto:)/.test(html),'No se permiten destinos externos provisionales');
+console.log('Correcto: archivos, anclas, IDs y límites de la demostración.');

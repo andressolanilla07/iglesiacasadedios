@@ -1,0 +1,42 @@
+node_modules/
+.next/
+out/
+dist/
+coverage/
+.turbo/
+
+# Material local, reservado o aún no autorizado para publicación.
+incoming/
+private/
+reserved/
+docs/private/
+*.ppt
+*.pptx
+*.pps
+*.ppsx
+*.doc
+*.docx
+*.xls
+*.xlsx
+
+# Secretos, certificados y bases locales.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.sqlite
+*.sqlite3
+*.db
+
+# Variante visual no seleccionada; se conserva solo de forma local.
+public/brand/logo-oficial1.png
+
+# Salidas y metadatos locales.
+*.log
+*.tsbuildinfo
+next-env.d.ts

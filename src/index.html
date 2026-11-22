@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Propuesta preliminar del sitio de la Iglesia Presbiteriana Cumberland Casa de Dios. Unidos por la construcción de un nuevo templo en Jamundí.">
+  <meta name="theme-color" content="#080875">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Iglesia Casa de Dios · Un lugar para creer y construir</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<div class="preview-bar">Propuesta preliminar <span>·</span> Campaña de construcción · Donaciones aún no habilitadas</div>
+<header class="header">
+  <a class="brand" href="#inicio" aria-label="Casa de Dios, inicio">
+    <img src="./assets/logo.svg" width="64" height="72" alt="Marcador provisional: logotipo original pendiente de incorporar">
+    <span><strong>Casa de Dios</strong><small>IGLESIA PRESBITERIANA CUMBERLAND</small></span>
+  </a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="navegacion">Menú <span aria-hidden="true">☰</span></button>
+  <nav id="navegacion" aria-label="Navegación principal">
+    <a href="#historia">Nuestras raíces</a><a href="#comunidad">Vida de iglesia</a><a href="#templo">Nuevo templo</a><a href="#contacto">Encuéntranos</a>
+    <button class="button gold small" data-donate>Quiero aportar <span aria-hidden="true">↗</span></button>
+  </nav>
+</header>
+<main id="contenido">
+<section class="hero section" id="inicio" aria-labelledby="titulo">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="line"></span> CASA DE DIOS · JAMUNDÍ</p>
+    <h1 id="titulo">La fe nos une.<br>Juntos <em>construimos.</em></h1>
+    <p class="lead">Un nuevo templo para encontrarnos, compartir la Palabra y servir a nuestra comunidad.</p>
+    <div class="actions"><button class="button blue" data-donate>Ser parte de esta obra <span aria-hidden="true">↗</span></button><a class="text-link" href="#templo">Conoce el proyecto <span aria-hidden="true">↓</span></a></div>
+    <p class="hero-note">Cada aporte será parte de una historia que continúa.</p>
+  </div>
+  <figure class="archive hero-image">
+    <div class="image-wrap"><img src="./assets/historia.svg" width="504" height="372" alt="Espacio reservado para la fotografía histórica original" fetchpriority="high"></div>
+    <figcaption><span>MEMORIA QUE NOS INSPIRA</span><span>Un futuro que construimos juntos</span></figcaption>
+    <span class="archive-seal" aria-hidden="true">FE<br><i>&</i><br>COMUNIDAD</span>
+  </figure>
+</section>
+<div class="values-strip" aria-label="Nuestra vocación"><span>Una comunidad de fe</span><span>Una historia compartida</span><span>Un nuevo templo</span></div>
+<section class="section temple" id="templo" aria-labelledby="templo-titulo">
+  <div class="section-intro"><p class="eyebrow">CONSTRUYAMOS JUNTOS</p><h2 id="templo-titulo">Más que un espacio.<br><em>Un lugar para servir.</em></h2></div>
+  <div class="temple-layout">
+    <div class="temple-story"><p>Queremos dar el siguiente paso: construir un templo que acompañe la vida de la iglesia y abra espacio para la oración, la enseñanza y el encuentro.</p><p>Esta primera etapa del sitio está dedicada a presentar el proyecto y preparar una campaña de aportes con información clara y canales oficiales.</p><a class="text-link" href="#transparencia">Nuestro compromiso de transparencia <span aria-hidden="true">↗</span></a><div class="milestones"><span class="milestone active"><b>01</b> Conoce la propuesta</span><span class="milestone"><b>02</b> Consulta los avances</span><span class="milestone"><b>03</b> Aporta cuando se habilite</span></div></div>
+    <aside class="donation-card" aria-labelledby="aportes-titulo"><p class="eyebrow">UN PROPÓSITO COMPARTIDO</p><h3 id="aportes-titulo">Tu generosidad<br>puede dejar huella.</h3><p>Elige un valor para conocer el recorrido de aporte de esta propuesta.</p><fieldset><legend>Aporte de ejemplo · pesos colombianos</legend><div class="amounts"><button type="button" data-amount="50000" aria-pressed="true">$50.000</button><button type="button" data-amount="100000" aria-pressed="false">$100.000</button><button type="button" data-amount="200000" aria-pressed="false">$200.000</button></div><label for="custom-amount">Otro valor (COP)</label><input id="custom-amount" type="number" min="1000" max="1000000000" step="1000" inputmode="numeric" placeholder="Ej. 300000"></fieldset><button class="button gold full" data-donate>Conocer cómo aportar <span aria-hidden="true">↗</span></button><p class="fine">Demostración sin cobros. Los canales oficiales están pendientes de verificación.</p></aside>
+  </div>
+  <details class="project-details"><summary>Planos, imágenes y avances del proyecto <span aria-hidden="true">+</span></summary><p>Este espacio reunirá los planos y renders aprobados, fotografías de la obra y avances con fecha de corte. Su publicación está pendiente de selección y autorización por la iglesia.</p></details>
+</section>
+<section class="history" id="historia" aria-labelledby="historia-titulo"><div class="section history-inner"><div><p class="eyebrow">NUESTRAS RAÍCES</p><h2 id="historia-titulo">Una historia de fe.<br><em>Un nuevo capítulo.</em></h2></div><div><p class="history-lead">Iglesia Presbiteriana Cumberland<br>Casa de Dios</p><p>Miramos nuestras raíces para seguir construyendo comunidad. Esta fotografía tendrá un lugar especial en el relato de la iglesia.</p><p class="pending">La reseña histórica completa y la identificación de esta imagen se incorporarán después de su revisión.</p><button class="text-link light" id="view-history">Ver fotografía histórica <span aria-hidden="true">↗</span></button></div></div></section>
+<section class="section community" id="comunidad" aria-labelledby="comunidad-titulo"><div class="section-heading"><div><p class="eyebrow">CAMINAMOS CONTIGO</p><h2 id="comunidad-titulo">Una iglesia para<br><em>vivir la fe.</em></h2></div><p>La construcción es parte del camino. La oración, el acompañamiento y el servicio dan sentido a lo que hacemos juntos.</p></div><div class="ministries">
+  <article><span class="number">01 /</span><h3>Oración</h3><p>Un espacio para presentar nuestras necesidades y acompañarnos en la fe.</p><button class="text-link" data-service="Oración">Conocer este espacio ↗</button></article>
+  <article><span class="number">02 /</span><h3>Acompañamiento pastoral</h3><p>Orientación y escucha para las distintas etapas de la vida.</p><button class="text-link" data-service="Acompañamiento pastoral">Contacto pastoral ↗</button></article>
+  <article><span class="number">03 /</span><h3>Grupos y comunidad</h3><p>Encuentros para aprender, compartir y crecer juntos.</p><button class="text-link" data-service="Grupos y comunidad">Explorar los grupos ↗</button></article>
+  <article><span class="number">04 /</span><h3>Evangelización y servicio</h3><p>Compartir el evangelio y expresar nuestra fe al servicio de los demás.</p><button class="text-link" data-service="Evangelización y servicio">Conocer cómo participar ↗</button></article>
+</div></section>
+<section class="section transparency" id="transparencia" aria-labelledby="transparencia-titulo"><div><p class="eyebrow">CONFIANZA QUE SE CUIDA</p><h2 id="transparencia-titulo">Aportar con claridad.</h2><p>La campaña contará con información revisada por la iglesia. Antes de activar las donaciones, se confirmarán los canales oficiales y la entidad beneficiaria.</p></div><div class="faq"><details><summary>¿Ya puedo hacer una donación?</summary><p>Todavía no. Esta es una propuesta navegable. No se solicitan datos de tarjetas, no se procesan pagos y no se muestran cuentas ni códigos QR provisionales.</p></details><details><summary>¿Dónde consultaré el avance de la obra?</summary><p>En la sección Nuevo templo se publicarán las actualizaciones autorizadas, su fecha de corte y los documentos que la iglesia decida compartir. El valor ejecutado de una obra no equivale necesariamente a las donaciones recaudadas.</p></details><details><summary>¿Se podrá aportar desde otro país?</summary><p>Es un objetivo de la campaña. Los países, medios de pago, moneda y condiciones se confirmarán cuando se seleccione y habilite la pasarela.</p></details></div></section>
+<section class="contact" id="contacto" aria-labelledby="contacto-titulo"><div class="section contact-inner"><div><p class="eyebrow">ESTE TAMBIÉN PUEDE SER TU LUGAR</p><h2 id="contacto-titulo">Nos alegrará<br><em>conocerte.</em></h2><p>Jamundí, Valle del Cauca, Colombia</p></div><dl><div><dt>Pastor o pastora</dt><dd>Nombre pendiente de confirmar</dd></div><div><dt>Encuentros y horarios</dt><dd>Información próximamente</dd></div><div><dt>Dirección y contacto oficial</dt><dd>Pendientes de confirmación</dd></div></dl></div></section>
+</main>
+<footer class="section footer"><p><strong>Casa de Dios</strong><br>Iglesia Presbiteriana Cumberland</p><p>Fe que nos reúne. Esperanza que construimos.</p><small>Versión preliminar · Contenido sujeto a revisión de la iglesia</small></footer>
+<dialog id="info-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Cerrar ventana">×</button><p class="eyebrow" id="dialog-category">CASA DE DIOS</p><h2 id="dialog-title"></h2><p id="dialog-copy"></p><p id="dialog-value" class="selected-value"></p><button class="button blue dialog-dismiss">Entendido</button></dialog>
+<dialog id="photo-dialog" aria-labelledby="photo-title"><button class="dialog-close" aria-label="Cerrar fotografía">×</button><h2 id="photo-title">Memoria que nos inspira</h2><img src="./assets/historia.svg" width="504" height="372" alt="Marcador de la fotografía histórica pendiente de incorporar"><p>Referencia histórica aportada al proyecto. Lugar, fecha y autoría pendientes de confirmar.</p><button class="button blue dialog-dismiss">Cerrar fotografía</button></dialog>
+</body>
+</html>

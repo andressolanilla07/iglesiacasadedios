@@ -1,0 +1,33 @@
+{
+  "name": "iglesia-casa-de-dios",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "check": "npm run typecheck && npm run test",
+    "prototype:build": "node scripts/build.mjs",
+    "prototype:dev": "node scripts/serve.mjs",
+    "prototype:check": "node scripts/check.mjs",
+    "prototype:verify": "npm run prototype:build && npm run prototype:check"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}
