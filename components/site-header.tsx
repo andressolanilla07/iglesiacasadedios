@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { publicAssetPath } from "@/modules/config/deployment";
 import { getSiteContent } from "@/modules/content/repository";
 import { SiteNav } from "./site-nav";
 
@@ -13,7 +14,7 @@ export function SiteHeader() {
           {/* PNG elegido por Andrés; el nombre institucional permanece como texto. */}
           <img
             className="brand-logo"
-            src="/brand/logo-oficial.png"
+            src={publicAssetPath("/brand/logo-oficial.png")}
             width={1197}
             height={1314}
             alt=""

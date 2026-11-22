@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { PageIntro } from "@/components/page-intro";
 import { PendingBadge } from "@/components/pending-badge";
+import { publicAssetPath } from "@/modules/config/deployment";
 import { getSiteContent } from "@/modules/content/repository";
 import {
   historicalImage,
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 
 export default function NuestraIglesiaPage() {
   const content = getSiteContent();
+  const historicalImageSrc = publicAssetPath(historicalImage.src);
 
   return (
     <>
@@ -40,13 +42,13 @@ export default function NuestraIglesiaPage() {
           <figure className="history-photo">
             <a
               className="history-photo__link"
-              href={historicalImage.src}
+              href={historicalImageSrc}
               target="_blank"
               rel="noreferrer"
               aria-label="Abrir imagen ampliada en una pestaña nueva"
             >
               <img
-                src={historicalImage.src}
+                src={historicalImageSrc}
                 width={historicalImage.width}
                 height={historicalImage.height}
                 alt={historicalImage.alt}

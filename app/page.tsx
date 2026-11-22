@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { publicAssetPath } from "@/modules/config/deployment";
 import { CampaignFigures } from "@/components/campaign-figures";
 import { DonationDisabledPanel } from "@/components/donation-disabled";
 import { PendingBadge } from "@/components/pending-badge";
@@ -108,7 +109,7 @@ export default function HomePage() {
               <div className="hero-media__frame">
                 {/* Marcador explícito: no hay fotografía original en la carpeta. */}
                 <img
-                  src="/brand/historia-marcador.svg"
+                  src={publicAssetPath("/brand/historia-marcador.svg")}
                   width={1008}
                   height={744}
                   alt="Marcador de la fotografía histórica; el original está pendiente de incorporar"

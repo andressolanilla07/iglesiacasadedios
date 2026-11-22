@@ -1,10 +1,8 @@
-# Publica únicamente el prototipo estático de dist/ como referencia.
-# No publica la aplicación Next.js: requiere servidor Node y PostgreSQL y no
-# debe presentarse como si el backend estuviera desplegado.
-name: Verificar prototipo y publicar referencia estática
+# Exporta la aplicación pública en modo demostración. GitHub Pages sirve solo
+# archivos estáticos: no despliega PostgreSQL, backend ni pagos.
+name: Publicar demostración de la aplicación en Pages
 
 on:
-  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -14,7 +12,8 @@ env:
   NEXT_TELEMETRY_DISABLED: '1'
 
 jobs:
-  prototype:
+  build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,16 +25,18 @@ jobs:
           cache: npm
       - name: Instalar dependencias
         run: npm ci
-      - name: Construir y verificar el prototipo
-        run: npm run prototype:verify
-      - name: Preparar artefacto estático
+      - name: Comprobar tipos y pruebas
+        run: npm run check
+      - name: Comprobar construcción habitual
+        run: npm run build
+      - name: Exportar demostración para Pages
+        run: npm run build:pages
+      - name: Preparar artefacto estático de la aplicación
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
-        if: github.event_name == 'workflow_dispatch'
         with:
-          path: dist
+          path: out
   deploy:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
-    needs: prototype
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       pages: write

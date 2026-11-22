@@ -1,5 +1,5 @@
 export const historicalImage = {
-  src: "/brand/Escena%20hist%C3%B3rica%20junto%20a%20la%20iglesia.png",
+  src: "/brand/Escena%20hist%C3%B3rica%20junto%20a%20la%20iglesia.png" as const,
   width: 1477,
   height: 1065,
   alt: "Escena histórica en blanco y negro: una calle con personas, vehículos, puestos y un edificio religioso al fondo.",

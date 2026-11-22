@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { publicAssetPath } from "@/modules/config/deployment";
 import { getSiteContent } from "@/modules/content/repository";
 
 export function SiteFooter() {
@@ -14,7 +15,7 @@ export function SiteFooter() {
             {/* PNG elegido por Andrés; el nombre institucional permanece como texto. */}
             <img
               className="footer-logo"
-              src="/brand/logo-oficial.png"
+              src={publicAssetPath("/brand/logo-oficial.png")}
               width={1197}
               height={1314}
               alt=""
