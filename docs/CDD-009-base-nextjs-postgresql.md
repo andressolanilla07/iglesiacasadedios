@@ -79,7 +79,7 @@ El detalle de revisión y las pruebas pendientes están en [`db/README.md`](../d
 - En producción se exige `DATABASE_URL` PostgreSQL válida; la validación se rechaza y la página no se renderiza si falta.
 - `PAYMENTS_ENABLED` solo se interpreta con el valor exacto `true` y no activa cobros.
 - Los errores de configuración no incluyen credenciales ni el valor de la URL.
-- Se añadieron cabeceras básicas de seguridad (`nosniff`, `DENY`, `Referrer-Policy`, `Permissions-Policy`, `COOP`). La CSP queda pendiente de una política compatible con la futura pasarela; no se añadió una política laxa para aparentar protección.
+- Se añadieron cabeceras básicas de seguridad (`nosniff`, `DENY`, `Referrer-Policy`, `Permissions-Policy`, `COOP`) para alojamientos que ejecuten Next.js. La exportación de GitHub Pages omite `headers()` porque Pages controla las respuestas: esas cabeceras no deben declararse activas allí sin comprobarlas. La CSP queda pendiente de una política compatible con la futura pasarela; no se añadió una política laxa para aparentar protección.
 
 ## Verificación realizada
 

@@ -57,7 +57,30 @@ npm run prototype:verify
 npm run prototype:dev
 ```
 
-Abrir http://127.0.0.1:4173. `prototype:verify` construye `dist/` y comprueba archivos, anclas, IDs, ausencia de formularios y destinos externos. El flujo de GitHub Pages publica únicamente este prototipo como referencia, no la aplicación dinámica.
+Abrir http://127.0.0.1:4173. `prototype:verify` construye `dist/` y comprueba archivos, anclas, IDs, ausencia de formularios y destinos externos. El prototipo se conserva como referencia, pero no es el contenido publicado por el flujo actual de GitHub Pages.
+
+## Demostración estática en GitHub Pages
+
+La aplicación actual puede exportarse específicamente para
+`https://andressolanilla07.github.io/iglesiacasadedios/`:
+
+```powershell
+npm run build:pages
+```
+
+Este comando fuerza el modo de demostración, vacía cualquier configuración de
+base de datos o pagos durante la construcción y genera `out/` con
+`basePath=/iglesiacasadedios`, rutas con barra final, payloads de navegación
+compatibles con un host sin reescrituras y `.nojekyll`. El comando habitual
+`npm run build` y la ejecución local conservan la configuración para un futuro
+alojamiento con servidor.
+
+El workflow `pages.yml` se ejecuta únicamente de forma manual desde `main` y
+solo publica después de superar `check`, el build habitual y la exportación.
+Pages sirve archivos estáticos: no ejecuta backend, PostgreSQL, autenticación ni
+pagos. Las cabeceras definidas por `headers()` en `next.config.ts` se omiten en
+la exportación porque GitHub Pages controla la respuesta HTTP; no deben
+considerarse activas allí sin comprobar las cabeceras reales del alojamiento.
 
 ## Estructura
 
@@ -102,4 +125,4 @@ La lectura de variables ocurre solo en servidor. No se deben incluir secretos en
 
 ## Límites de esta entrega
 
-No se han realizado pruebas con PostgreSQL real, autenticación, autorización efectiva, pasarela, webhooks, restauración, lector de pantalla ni despliegue. El smoke test HTTP de las páginas no sustituye una prueba de navegador. Cualquier cifra, canal de contacto, grupo, biografía o activo visual debe incorporarse con material vigente y autorización de la iglesia.
+No se han realizado pruebas con PostgreSQL real, autenticación, autorización efectiva, pasarela, webhooks, restauración ni lector de pantalla. El smoke test HTTP de las páginas no sustituye una prueba de navegador. Cualquier cifra, canal de contacto, grupo, biografía o activo visual debe incorporarse con material vigente y autorización de la iglesia.

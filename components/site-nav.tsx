@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+import { pathnameWithoutBasePath } from "@/modules/config/deployment";
 import type { PageDefinition } from "@/modules/content/types";
 
 const NAV_ID = "primary-navigation";
@@ -14,6 +15,7 @@ export function SiteNav({
   readonly pages: readonly PageDefinition[];
 }) {
   const pathname = usePathname();
+  const currentPath = pathnameWithoutBasePath(pathname);
   const [open, setOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
@@ -82,9 +84,9 @@ export function SiteNav({
           {pages.map((page) => {
             const isActive =
               page.slug === "/"
-                ? pathname === "/"
-                : pathname === page.slug ||
-                  pathname.startsWith(`${page.slug}/`);
+                ? currentPath === "/"
+                : currentPath === page.slug ||
+                  currentPath.startsWith(`${page.slug}/`);
 
             return (
               <li key={page.slug}>
