@@ -24,7 +24,9 @@ composición responsive y permanencia de los avisos de propuesta conceptual.
 
 Además de las capturas, la verificación con teclado confirmó:
 
-- cambio de nivel con flechas y foco sobre la pestaña activa;
+- cambio de nivel con flechas izquierda/derecha y `Home`/`End`, con foco sobre
+  la pestaña activa;
+- desplazamiento normal de la página con flechas arriba/abajo;
 - apertura de una imagen de galería con `Enter`;
 - cierre del diálogo con `Escape` y retorno del foco al botón de origen;
 - ausencia de reproducción automática.

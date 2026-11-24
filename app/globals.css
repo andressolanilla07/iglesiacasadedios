@@ -891,6 +891,10 @@ main:focus {
   min-width: 0;
 }
 
+.level-panel[hidden] {
+  display: none;
+}
+
 .level-panel:focus {
   outline-offset: -5px;
 }

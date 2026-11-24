@@ -24,7 +24,7 @@
 - Mantener accesibilidad por teclado, diseño móvil y preferencias de movimiento reducido.
 - Ejecutar `npm run build` y `npm run check` tras cambios funcionales.
 - La transformación nativa de TypeScript no es comprobación de tipos.
-- Los SVG de identidad e historia son marcadores heredados. La aplicación usa `logo-oficial.png`; conservar su PNG, transparencia, proporción natural y dibujo sin regenerarlo. No aplicar borde, fondo, contorno ni sombra al logo. El marcador histórico del hero permanece hasta recibir el activo específico aprobado. La escena histórica publicada en Nuestra iglesia debe conservar el aviso de mejora con IA.
+- Los SVG de identidad e historia son marcadores heredados. La aplicación usa `logo-oficial.png`; conservar su PNG, transparencia, proporción natural y dibujo sin regenerarlo. No aplicar borde, fondo, contorno ni sombra al logo. El hero principal usa una visualización conceptual del proyecto arquitectónico; no presentarla como fotografía de obra ejecutada. La escena histórica publicada en Nuestra iglesia debe conservar el aviso de mejora con IA.
 
 ## Datos proporcionados por Andrés
 

@@ -15,7 +15,6 @@ export function TempleProjectExplorer() {
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const level = projectLevels[activeLevel]!;
   const galleryItem =
     openGalleryItem === null ? null : projectGallery[openGalleryItem];
 
@@ -41,9 +40,9 @@ export function TempleProjectExplorer() {
   ) {
     let nextIndex: number | null = null;
 
-    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+    if (event.key === "ArrowRight") {
       nextIndex = (index + 1) % projectLevels.length;
-    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+    } else if (event.key === "ArrowLeft") {
       nextIndex = (index - 1 + projectLevels.length) % projectLevels.length;
     } else if (event.key === "Home") {
       nextIndex = 0;
@@ -64,6 +63,7 @@ export function TempleProjectExplorer() {
           className="level-tabs"
           role="tablist"
           aria-label="Niveles del proyecto arquitectónico"
+          aria-orientation="horizontal"
         >
           {projectLevels.map((item, index) => (
             <button
@@ -88,35 +88,43 @@ export function TempleProjectExplorer() {
           ))}
         </div>
 
-        <article
-          className="level-panel"
-          id={`panel-${level.id}`}
-          role="tabpanel"
-          aria-labelledby={`tab-${level.id}`}
-          tabIndex={0}
-        >
-          <figure className="level-panel__media">
-            <img
-              src={publicAssetPath(level.image.src)}
-              width={level.image.width}
-              height={level.image.height}
-              alt={level.image.alt}
-            />
-            <span>Visualización conceptual</span>
-          </figure>
-          <div className="level-panel__copy">
-            <p className="eyebrow">{level.shortLabel}</p>
-            <h3>{level.title}</h3>
-            <p>{level.summary}</p>
-            <p className="level-panel__benefit">
-              <strong>Para la comunidad</strong>
-              {level.benefit}
-            </p>
-            <p className="fine-print">
-              Propuesta sujeta a ajustes técnicos y aprobación institucional.
-            </p>
-          </div>
-        </article>
+        {projectLevels.map((level, index) => {
+          const isActive = activeLevel === index;
+
+          return (
+            <article
+              className="level-panel"
+              id={`panel-${level.id}`}
+              key={level.id}
+              role="tabpanel"
+              aria-labelledby={`tab-${level.id}`}
+              hidden={!isActive}
+              tabIndex={isActive ? 0 : -1}
+            >
+              <figure className="level-panel__media">
+                <img
+                  src={publicAssetPath(level.image.src)}
+                  width={level.image.width}
+                  height={level.image.height}
+                  alt={level.image.alt}
+                />
+                <span>Visualización conceptual</span>
+              </figure>
+              <div className="level-panel__copy">
+                <p className="eyebrow">{level.shortLabel}</p>
+                <h3>{level.title}</h3>
+                <p>{level.summary}</p>
+                <p className="level-panel__benefit">
+                  <strong>Para la comunidad</strong>
+                  {level.benefit}
+                </p>
+                <p className="fine-print">
+                  Propuesta sujeta a ajustes técnicos y aprobación institucional.
+                </p>
+              </div>
+            </article>
+          );
+        })}
       </div>
 
       <div className="gallery-heading">

@@ -28,8 +28,8 @@ export function SiteFooter() {
             {identity.city}
           </p>
           <p className="footer-note">
-            Sitio en preparación. La imagen del hero sigue como marcador hasta
-            incorporar el activo específico autorizado.
+            Las imágenes del proyecto son visualizaciones conceptuales sujetas a
+            revisión y ajustes.
           </p>
         </div>
 

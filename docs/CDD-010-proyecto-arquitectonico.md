@@ -71,7 +71,8 @@ realizadas.
 - La portada usa la perspectiva vertical de fachada. `/nuevo-templo` presenta
   cuatro niveles y una galería de seis vistas sin reproducción automática.
 - La ampliación usa un diálogo nativo, con cierre por botón o `Escape`; el
-  recorrido usa pestañas semánticas y admite flechas, `Home` y `End`.
+  recorrido usa pestañas semánticas, admite flechas izquierda/derecha, `Home` y
+  `End`, y no intercepta arriba/abajo.
 
 ## Diferencias entre renders y planos
 

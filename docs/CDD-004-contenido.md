@@ -66,4 +66,4 @@ La aplicación lo presenta con su proporción natural, junto al nombre instituci
 
 ## Incorporar originales
 
-Los SVG marcadores, el JPEG de la decisión anterior y las versiones regeneradas se conservan como materiales de referencia, pero no sustituyen la identidad vigente. La aplicación Next.js usa `public/brand/logo-oficial.png` en el encabezado y el pie, junto al nombre institucional como texto HTML. No inventar una vectorización ni reemplazar el PNG sin una nueva decisión expresa. El marcador de la fotografía del hero continúa hasta recibir el activo específico aprobado para esa composición.
+Los SVG marcadores, el JPEG de la decisión anterior y las versiones regeneradas se conservan como materiales de referencia, pero no sustituyen la identidad vigente. La aplicación Next.js usa `public/brand/logo-oficial.png` en el encabezado y el pie, junto al nombre institucional como texto HTML. No inventar una vectorización ni reemplazar el PNG sin una nueva decisión expresa. El hero principal presenta una visualización conceptual del proyecto arquitectónico, no una fotografía de obra ejecutada.
