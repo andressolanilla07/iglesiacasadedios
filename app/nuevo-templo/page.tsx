@@ -5,10 +5,12 @@ import { CampaignFigures } from "@/components/campaign-figures";
 import { DonationDisabledPanel } from "@/components/donation-disabled";
 import { PageIntro } from "@/components/page-intro";
 import { PendingBadge } from "@/components/pending-badge";
+import { TempleProjectExplorer } from "@/components/temple-project-explorer";
 import {
   campaignSummary,
   templeProject,
 } from "@/modules/temple-project/demo";
+import { projectCredit } from "@/modules/temple-project/project-content";
 
 export const metadata: Metadata = {
   title: "Nuevo templo",
@@ -53,9 +55,10 @@ export default function NuevoTemploPage() {
               claridad sobre el destino de cada aporte.
             </p>
             <p>
-              Todavía no hay una pasarela habilitada, un titular beneficiario
-              publicado ni cifras autorizadas para difundir. Esta página explica
-              el camino previsto sin simular que esas condiciones ya se cumplen.
+              El diseño arquitectónico y tres cifras generales ya están
+              incorporados para revisión visual. La pasarela, el titular
+              beneficiario y las donaciones recaudadas continúan sin publicar o
+              verificar.
             </p>
             <p>
               <PendingBadge>Contenido en preparación</PendingBadge>
@@ -69,9 +72,11 @@ export default function NuevoTemploPage() {
             <dl className="status-list">
               <div>
                 <dt>Moneda</dt>
-                <dd>
-                  <PendingBadge>Pendiente de confirmar</PendingBadge>
-                </dd>
+                <dd>COP · confirmada</dd>
+              </div>
+              <div>
+                <dt>Confirmación de cifras</dt>
+                <dd>24 de noviembre de 2026</dd>
               </div>
               <div>
                 <dt>Fecha de corte</dt>
@@ -90,7 +95,34 @@ export default function NuevoTemploPage() {
         </div>
       </section>
 
-      <section className="section section--paper" aria-labelledby="cifras-templo">
+      <section
+        className="section section--paper project-tour-section"
+        id="recorrido-niveles"
+        aria-labelledby="recorrido-titulo"
+      >
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Recorrido por niveles</p>
+              <h2 id="recorrido-titulo">
+                Espacios pensados
+                <br />
+                <em>para servir juntos.</em>
+              </h2>
+            </div>
+            <div>
+              <p>
+                Explora la propuesta desde el auditorio del semisótano hasta el
+                altillo y su terraza. No hay reproducción automática.
+              </p>
+              <p className="fine-print">{projectCredit}</p>
+            </div>
+          </div>
+          <TempleProjectExplorer />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="cifras-templo">
         <div className="container">
           <div className="section-heading">
             <div>
@@ -98,9 +130,9 @@ export default function NuevoTemploPage() {
               <h2 id="cifras-templo">Presupuesto, ejecutado y recaudo.</h2>
             </div>
             <p>
-              Son tres conceptos distintos. El valor ejecutado de una obra no se
-              convierte en porcentaje de donaciones recaudadas, y ninguna cifra
-              se publica sin aprobación.
+              Son conceptos distintos. La diferencia presupuestal no representa
+              dinero disponible y el valor ejecutado no se convierte en
+              porcentaje de donaciones recaudadas.
             </p>
           </div>
           <CampaignFigures />
@@ -140,7 +172,7 @@ export default function NuevoTemploPage() {
           </ol>
 
           <div className="note-panel">
-            <h3>Planos, renders y avances de obra</h3>
+            <h3>Referencias, no evidencia de obra ejecutada</h3>
             <p>{templeProject.note}</p>
           </div>
         </div>

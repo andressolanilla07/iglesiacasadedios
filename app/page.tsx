@@ -11,6 +11,10 @@ import {
   campaignSummary,
   templeProject,
 } from "@/modules/temple-project/demo";
+import {
+  projectCredit,
+  projectHeroImage,
+} from "@/modules/temple-project/project-content";
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -46,21 +50,21 @@ const communityAreas = [
 const projectAssets = [
   {
     number: "01",
-    title: "Planos y diseño",
+    title: "Cuatro niveles",
     description:
-      "Arquitectura, distribución y detalles técnicos por incorporar.",
+      "Auditorio, cafetería, salones de formación, sala polivalente y terraza.",
   },
   {
     number: "02",
-    title: "Renders y memoria",
+    title: "Recorrido conceptual",
     description:
-      "Imágenes y descripción del proyecto pendientes de autorización.",
+      "Visualizaciones para comprender cómo cada espacio puede servir a la comunidad.",
   },
   {
     number: "03",
-    title: "Documentos técnicos",
+    title: "Referencias técnicas",
     description:
-      "Presupuestos, licencias y soportes sujetos a revisión institucional.",
+      "Planos de junio de 2026 con ajustes todavía pendientes de consolidar.",
   },
 ] as const;
 
@@ -95,8 +99,11 @@ export default function HomePage() {
                   Conocer cómo aportar
                   <span aria-hidden="true">→</span>
                 </Link>
-                <Link className="button button--ghost" href="/nuevo-templo">
-                  Ver el proyecto
+                <Link
+                  className="button button--ghost"
+                  href="/nuevo-templo#recorrido-niveles"
+                >
+                  Recorre el futuro templo
                 </Link>
               </div>
               <p className="fine-print fine-print--light">
@@ -105,22 +112,20 @@ export default function HomePage() {
               </p>
             </div>
 
-            <figure className="hero-media">
+            <figure className="hero-media hero-media--project">
               <div className="hero-media__frame">
-                {/* Marcador explícito: no hay fotografía original en la carpeta. */}
                 <img
-                  src={publicAssetPath("/brand/historia-marcador.svg")}
-                  width={1008}
-                  height={744}
-                  alt="Marcador de la fotografía histórica; el original está pendiente de incorporar"
+                  src={publicAssetPath(projectHeroImage.src)}
+                  width={projectHeroImage.width}
+                  height={projectHeroImage.height}
+                  alt={projectHeroImage.alt}
                 />
                 <span className="hero-media__tag">
-                  Fotografía histórica · por incorporar
+                  Visualización conceptual del proyecto
                 </span>
               </div>
               <figcaption>
-                Espacio reservado para una fotografía original autorizada de la
-                iglesia.
+                Propuesta arquitectónica sujeta a ajustes · {projectCredit}
               </figcaption>
             </figure>
           </div>
@@ -154,19 +159,18 @@ export default function HomePage() {
               </h2>
             </div>
             <p>
-              La iglesia está reuniendo la documentación del proyecto para
-              presentarla con claridad. Los planos, renders, memorias y avances
-              se publicarán solo cuando estén autorizados y tengan fecha de
-              corte.
+              El proyecto organiza cuatro niveles para el culto, la formación,
+              el encuentro y el servicio. Las imágenes permiten recorrer la
+              intención arquitectónica sin presentarla como obra ejecutada.
             </p>
           </div>
 
           <div className="project-grid">
             <div className="project-copy">
               <p>
-                No se presentan documentos ni imágenes como aprobados antes de
-                tiempo. Este espacio quedará completo cuando la iglesia entregue
-                el material definitivo del proyecto.
+                Las visualizaciones son propuestas y los planos de junio de 2026
+                son referencias con ajustes pendientes. No acreditan licencias,
+                aforo definitivo ni accesibilidad certificada.
               </p>
               <p>
                 La campaña del nuevo templo es la prioridad de esta etapa. Antes
@@ -174,15 +178,23 @@ export default function HomePage() {
                 pasarela y la forma de conciliar cada pago.
               </p>
               <div className="pending-stack">
-                <PendingBadge>Planos pendientes de autorización</PendingBadge>
-                <PendingBadge>Renders pendientes de selección</PendingBadge>
-                <PendingBadge>Documentos en revisión</PendingBadge>
+                <span className="reference-badge">
+                  Visualizaciones conceptuales
+                </span>
+                <span className="reference-badge">
+                  Planos de referencia · junio de 2026
+                </span>
+                <PendingBadge>Ajustes técnicos pendientes</PendingBadge>
               </div>
               <p className="section-link">
-                <Link className="text-link" href="/nuevo-templo">
-                  Ver el estado de la campaña
+                <Link
+                  className="text-link"
+                  href="/nuevo-templo#recorrido-niveles"
+                >
+                  Recorrer el proyecto por niveles
                 </Link>
               </p>
+              <p className="fine-print">{projectCredit}</p>
             </div>
 
             <div className="asset-grid">
@@ -193,7 +205,7 @@ export default function HomePage() {
                   </p>
                   <h3>{asset.title}</h3>
                   <p>{asset.description}</p>
-                  <PendingBadge>Por incorporar</PendingBadge>
+                  <span className="reference-badge">Referencia publicada</span>
                 </article>
               ))}
             </div>
@@ -216,9 +228,9 @@ export default function HomePage() {
               </h2>
             </div>
             <p>
-              Todavía no se publican avances de obra verificados. Estas son las
-              etapas previstas para presentar el proyecto y habilitar aportes
-              con responsabilidad.
+              No se publican avances de obra sin evidencia. Estas etapas
+              distinguen la presentación conceptual del proyecto de las
+              verificaciones requeridas antes de habilitar aportes.
             </p>
           </div>
 
@@ -260,9 +272,9 @@ export default function HomePage() {
               <h2 id="transparencia-titulo">Cada cifra, en su lugar.</h2>
             </div>
             <p>
-              Presupuesto, valor ejecutado y donaciones recaudadas no son lo
-              mismo. No publicaremos importes sin fecha de corte, material
-              vigente y autorización.
+              Presupuesto, valor ejecutado, diferencia presupuestal y donaciones
+              recaudadas no son lo mismo. Las cifras confirmadas se publican sin
+              convertir la fecha de confirmación en una fecha de corte contable.
             </p>
           </div>
 

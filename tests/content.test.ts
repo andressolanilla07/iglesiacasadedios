@@ -6,6 +6,11 @@ import {
   campaignSummary,
   templeProject,
 } from "../modules/temple-project/demo.ts";
+import {
+  projectCredit,
+  projectGallery,
+  projectLevels,
+} from "../modules/temple-project/project-content.ts";
 
 test("el contenido se identifica como demostración y sin aprobación editorial", () => {
   assert.equal(demoContent.source, "demo");
@@ -69,19 +74,38 @@ test("no hay enlaces externos, correos ni teléfonos provisionales", () => {
   assert.ok(!/wa\.me/i.test(serialized));
 });
 
-test("las cifras de la campaña son pendientes y están separadas", () => {
+test("las cifras confirmadas están centralizadas y separadas del recaudo", () => {
   assert.equal(campaignSummary.status, "preparation");
   assert.equal(campaignSummary.cutoffDate, null);
-  assert.equal(campaignSummary.currencyStatus, "pending");
-  assert.equal(campaignSummary.figures.budget.status, "pending");
-  assert.equal(campaignSummary.figures.executed.status, "pending");
+  assert.equal(campaignSummary.currencyStatus, "confirmed");
+  assert.equal(campaignSummary.confirmationDate, "2026-11-24");
+  assert.equal(campaignSummary.figures.budget.amount, 1_099_873_000);
+  assert.equal(campaignSummary.figures.executed.amount, 172_500_000);
+  assert.equal(campaignSummary.figures.difference.amount, 927_373_000);
+  assert.equal(
+    campaignSummary.figures.budget.amount -
+      campaignSummary.figures.executed.amount,
+    campaignSummary.figures.difference.amount,
+  );
   assert.equal(campaignSummary.figures.raised.status, "pending");
-  assert.ok(!/"amount"\s*:/.test(JSON.stringify(campaignSummary)));
 });
 
 test("las etapas del proyecto no se presentan como terminadas", () => {
   for (const stage of templeProject.stages) {
     assert.notEqual(stage.status, "completed");
   }
-  assert.equal(templeProject.documentsStatus, "pending");
+  assert.equal(templeProject.documentsStatus, "reference");
+});
+
+test("el recorrido arquitectónico conserva cuatro niveles, seis vistas y el crédito", () => {
+  assert.equal(projectLevels.length, 4);
+  assert.equal(projectGallery.length, 6);
+  assert.equal(
+    projectCredit,
+    "Diseño arquitectónico: Arq. Agustín Torres García",
+  );
+  assert.deepEqual(
+    projectLevels.map((level) => level.id),
+    ["semisotano", "primer-piso", "segundo-piso", "altillo"],
+  );
 });

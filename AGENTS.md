@@ -24,7 +24,7 @@
 - Mantener accesibilidad por teclado, diseño móvil y preferencias de movimiento reducido.
 - Ejecutar `npm run build` y `npm run check` tras cambios funcionales.
 - La transformación nativa de TypeScript no es comprobación de tipos.
-- Los SVG de identidad e historia son marcadores heredados. La aplicación usa `logo-oficial.png`; conservar su PNG, transparencia, proporción natural y dibujo sin regenerarlo. No aplicar borde, fondo, contorno ni sombra al logo. El marcador histórico del hero permanece hasta recibir el activo específico aprobado. La escena histórica publicada en Nuestra iglesia debe conservar el aviso de mejora con IA.
+- Los SVG de identidad e historia son marcadores heredados. La aplicación usa `logo-oficial.png`; conservar su PNG, transparencia, proporción natural y dibujo sin regenerarlo. No aplicar borde, fondo, contorno ni sombra al logo. El hero principal usa una visualización conceptual del proyecto arquitectónico; no presentarla como fotografía de obra ejecutada. La escena histórica publicada en Nuestra iglesia debe conservar el aviso de mejora con IA.
 
 ## Datos proporcionados por Andrés
 
@@ -34,6 +34,8 @@
 - Páginas previstas: Inicio, Nuevo templo, Nuestra iglesia, Nuestro pastor, Vida en comunidad y Visítanos y contacto. El acceso para aportar debe ser visible y quedar inactivo o explicativo hasta habilitar la pasarela verificada.
 - La reseña fue extraída e incorporada en `/nuestra-iglesia` para revisión: raíces en los años treinta; reinicio de la obra en 2004; lotes adquiridos en julio de 2022; nombramiento de Adrián Ponce en enero de 2024, ordenación el 19 de enero de 2025; constitución en iglesia el 25 de enero de 2026. El dato del pastor no confirma por sí solo continuidad o contacto actual. Las variantes de nombres y la redacción siguen pendientes de aprobación institucional; los detalles técnicos se mantienen en CDD-004, no en la web pública.
 - No publicar cifras financieras solo a partir del historial de conversación. Requieren material vigente y autorización, sin confundir ejecutado con donaciones recaudadas.
+- Andrés confirmó el 24 de noviembre de 2026 el presupuesto total de $1.099.873.000 COP, el ejecutado reportado de $172.500.000 COP y la diferencia presupuestal de $927.373.000 COP. La fecha de confirmación no es fecha de corte contable; las donaciones recaudadas siguen pendientes. Mantener las cifras centralizadas y no presentar la diferencia como dinero disponible.
+- El proyecto arquitectónico publicado procede de `Templo_Casa_de_Dios_Junta_y_Web_R12_PRO.pptx` y se acredita a «Arq. Agustín Torres García». Las imágenes son visualizaciones conceptuales; los planos de junio de 2026 son referencias con ajustes pendientes. No afirmar licencias, aforo definitivo, accesibilidad certificada ni avance de construcción.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
