@@ -9,9 +9,13 @@
 | `public/brand/logo-oficial.png` | Decisión vigente de Andrés; incorporado en encabezado y pie | Conservar el PNG transparente, sus proporciones de 1197 × 1314 y el dibujo original, sin efectos de borde, fondo, contorno o sombra |
 | Logo generado transparente | Variante secundaria aceptada para otros usos | No reemplaza el logo original de la web |
 | `Reseña casa de Dios actualizada.pptx` | Recuperada desde Descargas; 25 diapositivas y 96 imágenes incrustadas | Texto extraído e incorporado para revisión; no copiar ni publicar la presentación de 74 MB ni sus fotografías automáticamente |
-| Presupuesto y ejecutado de conversaciones anteriores | Falta fecha de corte y autorización de publicación | No publicados en el sitio |
+| `Templo_Casa_de_Dios_Junta_y_Web_R12_PRO.pptx` | Fuente arquitectónica elegida; 22 diapositivas y 25 recursos | Publicar seis imágenes optimizadas como visualizaciones conceptuales; no publicar la presentación ni los originales completos |
+| Cifras confirmadas por Andrés el 24 de noviembre de 2026 | Presupuesto, ejecutado y diferencia autorizados; fecha de corte contable pendiente | Publicar por separado con fuente y límites; recaudo permanece pendiente |
 
 No confundir ejecutado, presupuesto, capital disponible y donaciones recaudadas. No convertir el ejecutado en porcentaje de recaudo.
+
+La revisión y las decisiones del proyecto arquitectónico están detalladas en
+[`CDD-010`](CDD-010-proyecto-arquitectonico.md).
 
 ## Contenido histórico incorporado
 
@@ -55,8 +59,8 @@ La aplicación lo presenta con su proporción natural, junto al nombre instituci
 - Dirección exacta, enlace de mapa validado, horarios y accesibilidad.
 - Grupos y ministerios reales, responsables y medios de contacto autorizados.
 - Canales oficiales: WhatsApp institucional, correo y redes.
-- Planos y renders aprobados del templo, fotos de avance y permiso de publicación.
-- Presupuesto y cifras que se pueden publicar, fecha de corte y responsable de actualización.
+- Aprobación institucional final de las visualizaciones y de los ajustes a los planos de junio de 2026; fotografías verificables de avance si existen.
+- Fecha de corte contable y responsable de actualización de las cifras; donaciones recaudadas conciliadas.
 - Titular legal y responsables de pagos; documentación por canal privado, fuera del repositorio público.
 - Responsable de aprobación editorial y frecuencia de actualización.
 

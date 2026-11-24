@@ -50,7 +50,9 @@ No se usaron versiones canary ni se desactivaron comprobaciones.
 
 ## Contenido y datos confirmados
 
-La base inicial usó únicamente la dirección y los dos horarios aportados en `AGENTS.md`. En una etapa editorial posterior se incorporaron el logo elegido por Andrés y el texto de la reseña histórica extraído de la presentación entregada. La reseña se publica para revisión, no como aprobación institucional definitiva. El perfil pastoral, los grupos, los canales de contacto, el mapa y las cifras permanecen pendientes.
+La base inicial usó únicamente la dirección y los dos horarios aportados en `AGENTS.md`. En etapas editoriales posteriores se incorporaron el logo elegido por Andrés, el texto de la reseña histórica y seis visualizaciones conceptuales del proyecto arquitectónico acreditado al Arq. Agustín Torres García. La reseña y el proyecto se publican para revisión, no como aprobación institucional definitiva. El perfil pastoral, los grupos, los canales de contacto y el mapa permanecen pendientes.
+
+Andrés confirmó el 24 de noviembre de 2026 el presupuesto total, el ejecutado reportado y su diferencia presupuestal. Esos valores están centralizados en `modules/temple-project/demo.ts`; las donaciones recaudadas y la fecha de corte contable siguen pendientes. La fecha de confirmación no se presenta como fecha contable y el ejecutado no se trata como recaudo.
 
 La aplicación usa `public/brand/logo-oficial.png` en el encabezado y el pie. El PNG transparente conserva la proporción natural de 1197 × 1314 y se muestra sin borde, fondo, contorno ni sombra; no debe sustituirse por una versión regenerada. Esta elección reemplaza el uso anterior de `logo-elegido.jpg`. `public/brand/logo-marcador.svg` se conserva solo como referencia del estado anterior. La escena histórica incorporada fue ampliada y mejorada con inteligencia artificial y debe mantener su aviso de procedencia.
 

@@ -12,9 +12,9 @@ La carpeta contiene una base de aplicación **Next.js 16 + TypeScript estricto**
 - Los aportes permanecen deshabilitados. `PAYMENTS_ENABLED` no activa cobros.
 - El prototipo estático anterior se conserva en `src/`, `scripts/` y `dist/` y sigue siendo ejecutable.
 - El modelo PostgreSQL está definido en `db/migrations/0001_init.sql`, pero **no se ha ejecutado**.
-- No hay repositorio remoto conectado ni despliegue publicado.
+- El repositorio remoto está conectado y la demostración de GitHub Pages conserva un flujo de publicación manual.
 
-El logo vigente elegido por Andrés está en `public/brand/logo-oficial.png`: es un PNG transparente de 1197 × 1314 que se muestra con su proporción natural, sin efectos de borde, fondo, contorno o sombra, junto al nombre institucional. Esta decisión reemplaza el uso anterior del JPEG. La reseña histórica fue extraída de la presentación entregada y publicada para revisión institucional sin copiar la presentación ni sus fotografías al sitio. `public/brand/Escena histórica junto a la iglesia.png` es una versión ampliada y mejorada con inteligencia artificial, no un original intacto, y se publica con esa advertencia. Siguen pendientes el boceto visual 03, las fotografías autorizadas del pastor y la comunidad, los renders, los planos y la aprobación editorial definitiva de nombres y fechas.
+El logo vigente elegido por Andrés está en `public/brand/logo-oficial.png`: es un PNG transparente de 1197 × 1314 que se muestra con su proporción natural, sin efectos de borde, fondo, contorno o sombra, junto al nombre institucional. Esta decisión reemplaza el uso anterior del JPEG. La reseña histórica fue extraída de la presentación entregada y publicada para revisión institucional sin copiar la presentación ni sus fotografías al sitio. `public/brand/Escena histórica junto a la iglesia.png` es una versión ampliada y mejorada con inteligencia artificial, no un original intacto, y se publica con esa advertencia. El proyecto arquitectónico incorpora seis visualizaciones conceptuales optimizadas y acredita al Arq. Agustín Torres García; los planos de junio de 2026 siguen como referencias con ajustes pendientes. Continúan pendientes el boceto visual 03, las fotografías autorizadas del pastor y la comunidad y la aprobación editorial definitiva de nombres y fechas.
 
 ## Requisitos
 
@@ -121,6 +121,7 @@ La lectura de variables ocurre solo en servidor. No se deben incluir secretos en
 - [Arquitectura y seguridad ampliadas](docs/CDD-007-arquitectura-seguridad.md)
 - [Inicio en OpenCode](docs/CDD-008-inicio-opencode.md)
 - [Base Next.js, TypeScript y PostgreSQL](docs/CDD-009-base-nextjs-postgresql.md)
+- [Proyecto arquitectónico para la web](docs/CDD-010-proyecto-arquitectonico.md)
 - [Modelo de datos y revisión pendiente](db/README.md)
 
 ## Límites de esta entrega
